@@ -9,7 +9,7 @@ TIMEZONE = 'Japan'
 
 DEFAULT_LANG = 'en'
 
-THEME = '/pelican-themes/chunk'
+THEME = 'pelican-themes/chunk'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
