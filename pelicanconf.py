@@ -1,6 +1,6 @@
 AUTHOR = 'su'
 SITENAME = 'chess.jp'
-SITEURL = ''
+SITEURL = 'https://sushihayama.github.io/chess/'
 
 PATH = "content"
 STATIC_PATHS = ['images', 'extra']
