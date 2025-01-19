@@ -9,7 +9,7 @@ TIMEZONE = 'Japan'
 
 DEFAULT_LANG = 'en'
 
-THEME = 'pelican-themes/new-bootstrap2'
+THEME = 'THEME = ''/home/runner/work/chess/chess/pelican-themes/new-bootstrap2'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
