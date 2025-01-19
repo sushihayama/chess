@@ -1,0 +1,39 @@
+name: Deploy Pelican Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # mainブランチに変更があったときにトリガーされる
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. リポジトリのコードをチェックアウト
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # 2. Pythonをセットアップ
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      # 3. 必要な依存関係をインストール
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pelican ghp-import
+
+      # 4. Pelicanでサイトをビルド
+      - name: Build the site
+        run: pelican content
+
+      # 5. GitHub Pagesにデプロイ
+      - name: Deploy to GitHub Pages
+        run: |
+          ghp-import output -b gh-pages
+          git push -u origin gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
