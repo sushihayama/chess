@@ -1,1 +1,1 @@
-THEME = 'pelican-themes/bootstrap2-dark'
+THEME = 'pelican-themes/new-bootstrap2'
